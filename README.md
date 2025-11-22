@@ -10,7 +10,7 @@
 下载文件后在 MOD 文件下运行：
 
 ```bash
-cd “你的MOD路径”
+cd 你的MOD路径
 python intel_compatibility.py
 ```
 
