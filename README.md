@@ -32,15 +32,15 @@ python intel_compatibility.py
 
 
 1. 确保加载器核心正确
-如果你使用了旧版的 3.6.exe 或其他过期的“修复工具”，可能会有一些错误。
+如果你使用了旧版的 3.6.exe 或其他过期的修复工具，可能会有一些错误。
 
 打开 XXMI 或 JASM。
 
 找到 SRMI 安装选项。
 
-点击 Reinstall (重新安装) 或 Update，确保核心文件（d3d11.dll）是最新版本。
-
-不要再运行旧版的 exe 修复工具。
+a.点击 Reinstall/Update，确保核心（d3d11.dll）是最新版本。
+b.不要再运行旧版的 exe 修复工具。
+c.移除SRMI/下的mod文件
 
 2. 全局配置修复
 请手动修改 d3dx.ini 配置文件：
@@ -55,10 +55,10 @@ Ini, TOML
 DRAW_TYPE == 1
 ; 强制纹理拷贝，修复 Intel 显卡贴图透明/缺失的核心指令
 copymips = 1
-B. 在 [Device] 区域下添加/修改：
+B. 在 [Device] 区域下添加修改：
 Ini, TOML
 
-; 强制 CPU 访问，修复模型爆炸/乱码
+; 强制 CPU 访问，修复模型乱码
 force_cpu_access = 1
 
 ; 修正分辨率识别错误，防止衣服错位
