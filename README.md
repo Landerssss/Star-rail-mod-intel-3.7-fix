@@ -1,11 +1,11 @@
 # Star-rail-mod-intel-3.7-fix 🔧
 > **星穹铁道 Intel 显卡 Mod 问题综合修复方案**
 
-在 Intel 显卡（集显/独显）环境下使用 Mod 时出现的**人物黑屏、模型爆炸、贴图丢失（半身/透明）**等问题。整合了手动配置文件修复与 Python 哈希自动修正脚本。
+在 Intel 显卡（集显/独显）环境下使用 Mod 时出现的人物黑屏、模型爆炸、贴图丢失（半身/透明）等问题。整合了手动配置文件修复与 Python 哈希自动修正脚本。
 
 ---
 
-## 📜 背景说明 (Patch Notes)
+##  (Patch Notes)
 
 
 # Star-rail-mod-intel-3.7-fix 🔧
