@@ -29,11 +29,10 @@ python intel_compatibility.py
 **以下是我的补充说明：如果模组修复后仍然无法正常运行：**
 很可能是 `.ini` 文件中缺少以下一行判定代码（建议参考其他正常运行的 Mod）：
 ```ini
-DRAW_TYPE == 1
-注：某些 Intel GPU 版本可能还会有其他问题，但目前尚未得到确认。
 
-第一步：确保加载器核心正确  
-如果你使用了旧版的 3.6.exe 或其他过期的“修复工具”，可能会有一些错误
+
+1. 确保加载器核心正确
+如果你使用了旧版的 3.6.exe 或其他过期的“修复工具”，可能会有一些错误。
 
 打开 XXMI 或 JASM。
 
@@ -41,23 +40,22 @@ DRAW_TYPE == 1
 
 点击 Reinstall (重新安装) 或 Update，确保核心文件（d3d11.dll）是最新版本。
 
-不要 再运行旧版的 exe 修复工具。
+不要再运行旧版的 exe 修复工具。
 
-第二步：全局配置修复 
-请手动修改 d3dx.ini 配置文件。
+2. 全局配置修复
+请手动修改 d3dx.ini 配置文件：
 
 打开 SRMI 文件夹下的 d3dx.ini。
 
 使用记事本或代码编辑器，修改/确认以下参数（如果没有请手动添加）：
 
-在 [Rendering] 区域下添加：
-
+A. 在 [Rendering] 区域下添加：
 Ini, TOML
 
+DRAW_TYPE == 1
 ; 强制纹理拷贝，修复 Intel 显卡贴图透明/缺失的核心指令
 copymips = 1
-在 [Device] 区域下添加/修改：
-
+B. 在 [Device] 区域下添加/修改：
 Ini, TOML
 
 ; 强制 CPU 访问，修复模型爆炸/乱码
@@ -68,10 +66,8 @@ get_resolution_from = depth_stencil
 
 ; 解决闪屏问题 (绝对不能设为 1)
 rasterizer_disable_scissor = 0
-在 [Rendering] 区域修改（可选，优化防丢图）：
-
+C. 在 [Rendering] 区域修改（可选，优化防丢图）：
 Ini, TOML
 
 ; 开启显存追踪，防止加载一半丢失
 track_texture_updates = 1
-
