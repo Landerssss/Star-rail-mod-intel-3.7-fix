@@ -11,6 +11,7 @@
 
 ```bash
 cd “你的MOD路径”
+```bash
 python intel_compatibility.py
 
 
