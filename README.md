@@ -6,19 +6,7 @@
 ---
 
 ## 📜 背景说明 (Patch Notes)
-1. 🛑如果你使用了旧版的 3.6.exe 或其他过期的修复工具，会导致人物错乱，需要重新导入mod打开 XXMI 或 JASM。
 
-找到 SRMI 安装选项。
-
-点击 Reinstall (重新安装) 或 Update，确保核心文件（d3d11.dll）是最新版本。
-
-不要 再运行旧版的 exe 修复工具。
-2. 手动修改 d3dx.ini 配置文件
-这是一个为你精心整理的 README.md 文档内容。它整合了你提供的背景信息、我们在对话中总结的修复方案，以及该 Python 脚本的使用说明。
-
-你可以直接复制下面的代码块，新建一个 README.md 文件并粘贴进去。
-
-Markdown
 
 # Star-rail-mod-intel-3.7-fix 🔧
 > **星穹铁道 Intel 显卡 Mod 问题综合修复方案**
